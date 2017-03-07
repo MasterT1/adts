@@ -11,17 +11,17 @@ int Stack::size()
 
 void Stack::push(int val)
 {
-	data.insert(int val, int k);
+	data.insert(val, 1);
  }
 
 void Stack::pop()
 {
-	data.remove(int k);
+	data.remove(1);
 }
 	
 int Stack::top()
 {
-	data.get(int k);	
+	data.get(1);	
 }
 	
 void Stack::clear()
