@@ -15,13 +15,15 @@ class List //begin List definition
     
   public:
      ~List();//destructor
-     void insert(int element, int k);//insert element at location k
+     void insert(int element, int k);//insert element at location k     
      void remove(int k);//remove element at location k
      int size();//return the number of elements in the List
      
      
      /** MISSING OPERATIONS */
      //... fill in ....
+     int get(int k); //get element at location k
+     void clear(); //clears the elements in the List
 
 };//end List definition
 

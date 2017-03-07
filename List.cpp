@@ -93,3 +93,41 @@ void List::remove(int k)
 	
 	//Implementations of missing operations
 	
+	
+	int List::get(int k)
+	{
+		if (k < 1 or k > num_elements +1) //if the location is invalid
+	     throw out_of_range("List::getAt(...)");//throw an "out_of_range" exception
+	     
+	     Node* newPtr = nullptr;
+	     
+	     if(k == 1)
+	{
+	  newPtr = frontPtr;
+	  return frontPtr->data;	  
+	  
+	 }
+	else
+	 {  
+	
+	  Node* tmpPtr = frontPtr;
+	  int loc = 1; 
+	  
+	    while( loc != k-1) //get pointer to (k-1)th node
+	     {
+		tmpPtr = tmpPtr->link;
+		loc++;
+	     }
+	
+	  newPtr->link = tmpPtr->link;
+	  return tmpPtr->data;  
+        }//end else
+	}
+	
+	void List::clear()
+	{
+		while(size() != 0)
+		{
+			remove(1);
+		}
+	}
