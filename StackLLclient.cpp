@@ -11,7 +11,7 @@ string reverseString(string str)
      Stack stk;
 
    for (auto ch : str ) 
-      stk.push(ch);
+      stk.push(ch);      
 
     
     while( stk.size() > 0)

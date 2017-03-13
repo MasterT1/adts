@@ -3,6 +3,9 @@
 #ifndef STACK_H
 #define STACK_H
 
+
+#include "List.h"
+
 class Stack
 {
 private:
@@ -11,6 +14,8 @@ private:
 
    Node* frontPtr = nullptr;
    int num_elements = 0;
+   
+   List data;   
 
 public:
 
@@ -21,7 +26,7 @@ public:
 
    int size();
 
-   void push(int val, int num_elements);
+   void push(int val);
 
    void pop();
 

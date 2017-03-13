@@ -4,15 +4,16 @@
 #define STACK_H
 
 #include <vector>
+#include "List.h"
+
 using namespace std;
 
 class Stack
 {
 private:
 
-      vector<int> data;
-  
-
+      vector<List> data;       
+		
 public:
 
     // No default c'tor needs to be declared 
@@ -24,7 +25,7 @@ public:
 
    int size();
 
-   void push(int);
+   void push(int val);
 
    void pop();
 

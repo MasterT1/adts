@@ -1,21 +1,21 @@
 #include "StackLL.h"
+#include "List.h"
+#include "List.cpp"
 #include <iostream>
 #include <stdexcept>//used to be able to "throw" exceptions
 
 using namespace std;
 
+
 int Stack::size()
- {
-	num_elements = data.size(); 
-    return num_elements;
+ {	
+    return data.size();
  }
 
-void Stack::push(int val, int num_elements)
-{
-	for(int i = 1; i < num_elements-1; i++)
-	{
-		data.insert(val, i);
-	}
+void Stack::push(int val)
+{	
+	data.insert(val, 1);
+	
  }
 
 void Stack::pop()
@@ -31,4 +31,9 @@ int Stack::top()
 void Stack::clear()
 {
 	data.clear();
+}
+
+Stack::~Stack()
+{
+	data.~List();	
 }
