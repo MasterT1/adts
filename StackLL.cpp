@@ -9,6 +9,7 @@ using namespace std;
 
 int Stack::size()
  {	
+	cout << data.size() << endl;
     return data.size();
  }
 

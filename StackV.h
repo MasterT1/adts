@@ -10,10 +10,12 @@ using namespace std;
 
 class Stack
 {
-private:
-
-      vector<List> data;       
-		
+private:        
+      
+      //List data;  
+      vector<int> data;
+      data.push_back(val);      
+	 	
 public:
 
     // No default c'tor needs to be declared 
