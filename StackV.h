@@ -4,17 +4,14 @@
 #define STACK_H
 
 #include <vector>
-#include "List.h"
 
 using namespace std;
 
 class Stack
 {
-private:        
-      
-      //List data;  
-      vector<int> data;
-      data.push_back(val);      
+private:
+       
+      vector<int> data;            
 	 	
 public:
 

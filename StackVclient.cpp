@@ -12,8 +12,6 @@ string reverseString(string str)
 
    for (auto ch : str ) 
       stk.push(ch);
-      cout << stk.size()<<endl;
-
     
     while( stk.size() > 0)
        {

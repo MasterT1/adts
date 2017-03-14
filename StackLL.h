@@ -15,7 +15,7 @@ private:
    Node* frontPtr = nullptr;
    int num_elements = 0;
    
-   List data;   
+   //List data;   
 
 public:
 
