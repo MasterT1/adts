@@ -1,40 +1,57 @@
 #include "StackLL.h"
-#include "List.h"
-#include "List.cpp"
 #include <iostream>
 #include <stdexcept>//used to be able to "throw" exceptions
 
 using namespace std;
 
+class Stack::Node //self-referential Node class
+{
+	public:
+	   int data = 0;
+	   Node* link = nullptr;	  	
+};
 
 int Stack::size()
  {	
-	cout << data.size() << endl;
-    return data.size();
+    return num_elements;
  }
 
 void Stack::push(int val)
 {	
-	data.insert(val, 1);
+	Node* newPtr = new Node{val};
+	newPtr->link = frontPtr;
+	frontPtr = newPtr;
+	
+	num_elements++;
 	
  }
 
 void Stack::pop()
 {
-	data.remove(1);
+	Node* delPtr = frontPtr;
+	frontPtr = frontPtr->link;
+	
+	delete delPtr;
+	num_elements--;
 }
 	
 int Stack::top()
-{
-	data.get(1);	
+{	
+	return 	frontPtr->data;
 }
 	
 void Stack::clear()
 {
-	data.clear();
+	while(size() != 0)
+	{
+		pop();
+	}
 }
 
 Stack::~Stack()
-{
-	data.~List();	
+{	
+    while(num_elements > 0)
+    {
+		pop();
+	}	
 }

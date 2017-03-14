@@ -4,8 +4,6 @@
 #define STACK_H
 
 
-#include "List.h"
-
 class Stack
 {
 private:
@@ -13,9 +11,7 @@ private:
    class Node;
 
    Node* frontPtr = nullptr;
-   int num_elements = 0;
-   
-   //List data;   
+   int num_elements = 0;     
 
 public:
 
